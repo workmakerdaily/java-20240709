@@ -11,12 +11,19 @@ public class Addition_of_fractions {
 		int denom1 = 2;
 		int numer2 = 1;
 		int denom2 = 3;
-		int[] answer = {(numer1*denom2) + (numer2*denom1),denom1*denom2};	
-		// numer1/denom1 + numer2/denom2
-//		{(numer1*denom2) + (numer2*denom1),denom1*denom2};
-//		if((numer1*denom2) + (numer2*denom1) % denom1*denom2 == 0) 
+		
+		int a = (numer1*denom2) + (numer2*denom1);
+		int b = denom1*denom2;
+		for(int i = 11; i > 0; i--) {
+			if(a%i == 0 && b%i == 0) {
+				a = a / i;
+				b = b / i;
+			}
+		}
+
+		int[] answer = {a,b};
 		
 		System.out.println(Arrays.toString(answer));
-		
 	}
+	
 }
